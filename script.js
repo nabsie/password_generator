@@ -32,12 +32,12 @@ function generatePassword() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
   }
 
-  function specialChar(){
-    return String.fromCharCode(Math.floor(Math.random() * 14) + 33)
+  function specialChar() {
+    return String.fromCharCode(Math.floor(Math.random() * 14) + 33);
   }
 
   function numberChar() {
-    return String.fromCharCode(Math.floor(Math.random() * 10) + );
+    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
   }
 
   // Return our created password
