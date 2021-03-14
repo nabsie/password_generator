@@ -6,13 +6,16 @@ function generatePassword() {
   var password = "";
 
   // Logic would go here
-  const passwordLength = parseInt(
+  let passwordLength = parseInt(
     prompt(
       "How long do you want your password to be? Please select between 8 and 128"
     )
   );
-
-  console.log(typeof passwordLength);
+  if (!passwordLength || passwordLength < 8 || passwordLength > 128) {
+    passwordLength = parseInt(
+      prompt("Invalid input! Please put a number between 8 and 128")
+    );
+  }
 
   // Return our created password
   return password;
