@@ -27,7 +27,18 @@ function generatePassword() {
   function upperCase() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
   }
-  console.log(upperCase());
+
+  function lowerCase() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+  }
+
+  function specialChar(){
+    return String.fromCharCode(Math.floor(Math.random() * 14) + 33)
+  }
+
+  function numberChar() {
+    return String.fromCharCode(Math.floor(Math.random() * 10) + );
+  }
 
   // Return our created password
   return password;
