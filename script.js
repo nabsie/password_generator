@@ -16,6 +16,14 @@ function generatePassword() {
       prompt("Invalid input! Please put a number between 8 and 128")
     );
   }
+  If (passwordLength>8 || passwordLength<128) {
+    let hasUppercase = confirm ("Do you want uppercase letters?")
+  let hasLowercase = confirm ("Do you want lowercase letters?")
+  let hasSpecialChar = confirm ("Do you want special characters?")
+  let hasNumber = confirm ("Do you want numbers?")
+  }
+
+  
 
   // Return our created password
   return password;
