@@ -1,11 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-// Declare a new function
+// Declare function for generate password
 function generatePassword() {
   // Create a variable to store our generated password
   var password = "";
 
-  // Logic would go here
+  // Prompt for password length
   let passwordLength = parseInt(
     prompt(
       "How long do you want your password to be? Please select between 8 and 128"
@@ -39,6 +39,14 @@ function generatePassword() {
   function numberChar() {
     return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
   }
+
+  // function optionsArray(low, high) {
+  //   const array = [];
+  //   for (let i = low; i <= high; i++) {
+  //     array.push(i);
+  //   }
+  //   return array;
+  // }
 
   // Return our created password
   return password;
