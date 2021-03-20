@@ -63,25 +63,29 @@ function generatePassword() {
   let specialChar = ["?", "!", "$", "£", "%", "&", "@", "#", "<", "^", "<"];
   // Create a variable to store our generated password
   var password = "";
+
+  // holds the choices the user chooses for password
   let options = [];
+
   // Prompt for password length
   let passwordLength = parseInt(
     prompt(
       "How long do you want your password to be? Please select between 8 and 128"
     )
   );
-  if (!passwordLength || passwordLength <= 8 || passwordLength >= 128) {
+  if (!passwordLength || passwordLength < 8 || passwordLength > 128) {
     passwordLength = parseInt(
       prompt("Invalid input! Please put a number between 8 and 128")
     );
   }
-
+  // if password length passes criteria we go to these options
   if (passwordLength >= 8 || passwordLength <= 128) {
     let hasUppercase = confirm("Do you want uppercase letters?");
     let hasLowerCase = confirm("Do you want lowercase letters?");
     let hasSpecialChar = confirm("Do you want special characters?");
     let hasNumber = confirm("Do you want numbers?");
 
+    // pushing choices into options array
     if (hasUppercase) {
       options.push.apply(options, upperCase);
     }
@@ -95,26 +99,14 @@ function generatePassword() {
       options.push.apply(options, numbers);
     }
   }
+
+  // for loop to generate an index in the options array based on password length
   for (i = 0; i < passwordLength; i++) {
+    // selecting a random number between 0 and the options length
     let index = Math.floor(Math.random() * options.length);
-    options[index];
+    // selecting a random index from the options array and adding to the password string
+    password += options[index];
   }
-
-  // function upperCase() {
-  //   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-  // }
-
-  // function lowerCase() {
-  //   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-  // }
-
-  // function specialChar() {
-  //   return String.fromCharCode(Math.floor(Math.random() * 14) + 33);
-  // }
-
-  // function numberChar() {
-  //   return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-  // }
 
   // Return our created password
   return password;
