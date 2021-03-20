@@ -96,7 +96,8 @@ function generatePassword() {
     }
   }
   for (i = 0; i < passwordLength; i++) {
-    Math.floor(Math.random() * options.length);
+    let index = Math.floor(Math.random() * options.length);
+    options[index];
   }
 
   // function upperCase() {

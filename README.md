@@ -10,7 +10,7 @@ SO THAT I can create a strong password that provides greater security
 
 - creating a prompt for the initial length of the password
 - creating confirms for the uppercase, lowercase, numbers and special characters
-- using char codes to select the characters for the password
+- used arrays to select the characters for the password
 
 ## screenshots
 
