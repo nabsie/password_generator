@@ -14,6 +14,8 @@ SO THAT I can create a strong password that provides greater security
 
 ## screenshots
 
+![screenshot](Screenshot.png)
+
 ## deployed link
 
 https://nabsie.github.io/password_generator/.
